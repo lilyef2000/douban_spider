@@ -30,8 +30,8 @@ class DoubanSpider(CrawlSpider):
         sel=Selector(response)
         item=DoubanSpiderItem()
 
-        movie_name=sel.xpath('//span[@class="title"][1]/text()').extract()
-        star=sel.xpath('//div[@class="star"]/span/em/text()').extract()
+        movie_name=sel.xpath('//div[@class="hd"]/a/span[1]/text()').extract()#//span[@class="title"][1]/text()
+        star=sel.xpath('//div[@class="star"]/span[@class="rating_num"]/text()').extract()
         quote=sel.xpath('//p[@class="quote"]/span[@class="inq"]/text()').extract()
 
 
