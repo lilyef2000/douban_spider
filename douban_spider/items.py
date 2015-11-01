@@ -8,7 +8,10 @@
 import scrapy
 
 
+
 class DoubanSpiderItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+
+    movie_name=scrapy.Field()
+
+    star=scrapy.Field()
+    quote=scrapy.Field()
